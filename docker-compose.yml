@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  bird:
+    container_name: bird
+    build:
+      context: .
+      dockerfile: 'Dockerfile'
+    ports:
+      - '8050:8050'
+    networks:
+      - db
+
+networks:
+ db:
+  external: true
