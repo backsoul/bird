@@ -10,7 +10,7 @@ import { Post } from './posts/entities/post.entity';
     PostsModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'web',
+      host: 'mysqldb',
       port: 3306,
       username: 'root',
       password: 'password',
