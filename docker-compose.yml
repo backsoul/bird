@@ -8,8 +8,15 @@ services:
     ports:
       - '8050:8050'
     networks:
-      - db
+      - web
+    environment:
+      NODE_ENV: production
+      TZ: America/Bogota
+      VIRTUAL_HOST: bird.backsoul.xyz
+      VIRTUAL_PORT: 8000
+      LETSENCRYPT_HOST: bird.backsoul.xyz
+      LETSENCRYPT_EMAIL: danielsarmientoenterprise@gmail.com
 
 networks:
- db:
+ web:
   external: true
