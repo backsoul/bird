@@ -9,13 +9,13 @@ services:
       - 8050
     networks:
       - web
-    environment:
-      NODE_ENV: production
-      TZ: America/Bogota
-      VIRTUAL_HOST: bird.backsoul.xyz
-      VIRTUAL_PORT: 8050
-      LETSENCRYPT_HOST: bird.backsoul.xyz
-      LETSENCRYPT_EMAIL: danielsarmientoenterprise@gmail.com
+    # environment:
+    #   NODE_ENV: production
+    #   TZ: America/Bogota
+    #   VIRTUAL_HOST: bird.backsoul.xyz
+    #   VIRTUAL_PORT: 8050
+    #   LETSENCRYPT_HOST: bird.backsoul.xyz
+    #   LETSENCRYPT_EMAIL: danielsarmientoenterprise@gmail.com
 
 networks:
  web:
