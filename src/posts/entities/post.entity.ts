@@ -13,4 +13,7 @@ export class Post {
 
   @Column()
   userName: string;
+
+  @Column()
+  userId: string;
 }

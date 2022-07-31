@@ -13,12 +13,18 @@ export class PostsController {
 
   @Post('/create')
   create(@Body() data: any) {
-    const post: createPostDto = { content: '', userName: '', userUrlPhoto: '' };
+    const post: createPostDto = {
+      content: '',
+      userName: '',
+      userUrlPhoto: '',
+      userId: '',
+    };
     const { payload } = JSON.parse(data.payload);
     console.log(payload);
     post.content = payload.content;
     post.userName = data.user.Name;
     post.userUrlPhoto = data.user.Picture;
+    post.userId = data.user.Id;
     return this.postsService.create(post);
   }
 }
